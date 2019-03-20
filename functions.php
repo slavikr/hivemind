@@ -83,6 +83,12 @@ if ( ! function_exists( 'hivemind_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'hivemind_setup' );
 
+function add_search_box( $items, $args ) {
+	$items .= '<li>' . get_search_form( false ) . '</li>';
+	return $items;
+}
+add_filter( 'wp_nav_menu_items','add_search_box', 10, 2 );
+
 function hivemind_add_editor_style() {
 	add_editor_style('dist/css/editor-style.css');
 }

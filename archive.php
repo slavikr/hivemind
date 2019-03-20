@@ -7,12 +7,11 @@
  * @package hivemind
  */
 
-get_header();
-?>
+get_header(); ?>
 
 	<div id="primary" class="content-area col-md-12">
 		<main id="main" class="site-main">
-
+			
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
