@@ -20,7 +20,6 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
-
 # Typography
 # Elements
 # Forms
@@ -352,10 +351,37 @@ a:hover, a:active {
 .navbar {
 	padding-left: 0;
 	padding-right: 0;
+	margin: 5px 0 5px 0;
 }
 
 .navbar-nav {
+	font-size: 13px;
+  font-weight: 600;
 	text-transform: uppercase;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #021a33;
+}
+
+a.nav-link.active {
+	color: #6c757d;
+	padding-bottom: 6px;
+	border-bottom: 2px solid red;
+}
+
+.active-pink-2 {
+	border-bottom: 1px solid #021a33;
+	box-shadow: 0 1px 0 0 #021a33;
+	margin-left: 8px;
+}
+
+input.form-control, .form-control:focus {
+	border:none;
+	font-size: 13px;
+  font-weight: 600;
+	text-transform: uppercase;
+	box-shadow:none;
 }
 
 .open > .dropdown-menu {

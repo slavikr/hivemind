@@ -45,7 +45,7 @@
 				<?php endif; ?>
 			</div><!-- .site-branding -->
 
-			<button class="navbar-toggler navbar-dark navbar-toggler-right" type="button" data-toggle="collapse" data-target="#bs4navbar" aria-controls="bs4navbar" aria-expanded="false" area-label="Toggle navigation">
+			<button class="navbar-toggler navbar-light navbar-toggler-right" type="button" data-toggle="collapse" data-target="#bs4navbar" aria-controls="bs4navbar" aria-expanded="false" area-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<?php
