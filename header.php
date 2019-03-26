@@ -21,10 +21,10 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site container">
+<div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'hivemind' ); ?></a>
 
-	<header id="masthead" class="site-header">
+	<header id="masthead" class="site-header container">
 		<nav id="menu" class="navbar navbar-expand-md navbar-light" role="navigation">
 			<div class="site-branding navbar-brand">
 				<?php
@@ -65,5 +65,5 @@
 		</nav>
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content row">
+	<div id="content" class="site-content container">
 		
