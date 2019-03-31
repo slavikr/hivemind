@@ -118,6 +118,13 @@ function hivemind_include_custom_jquery() {
 }
 add_action('init', 'hivemind_include_custom_jquery');
 
+// Adds post link to thumbnail image
+function my_post_image_html( $html, $post_id, $post_image_id ) {
+  $html = '<a href="' . get_permalink( $post_id ) . '" title="' . esc_attr( get_post_field( 'post_title', $post_id ) ) . '">' . $html . '</a>';
+  return $html;
+}
+add_filter( 'post_thumbnail_html', 'my_post_image_html', 10, 3 );
+
 /**
  * Enqueue scripts and styles.
  */
@@ -128,7 +135,11 @@ function hivemind_scripts() {
 
 	wp_enqueue_style( 'hivemind-style', get_stylesheet_uri() );
 
+	wp_enqueue_script('main', get_template_directory_uri() . '/src/js/main.js', array(), '', true);	
+
 	wp_enqueue_script('pooper', get_template_directory_uri() . '/src/js/pooper.min.js', array(), '', true);	
+
+	wp_enqueue_script('wavesurfer', get_template_directory_uri() . '/src/js/wavesurfer.min.js', array('jquery'), '', true);	
 
 	wp_enqueue_script('pace', get_template_directory_uri() . '/src/js/pace.js', array(), '', true);	
 
