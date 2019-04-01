@@ -25,7 +25,7 @@ get_header();
 				<div class="col-md-9 no-padding">
 					<h1 class="pod-title"><?php the_title(); ?></h1>
 					<div class="entry-meta"><?php hivemind_posted_on(); ?></div>
-					<div class="pod-content"><?= get_post_field('post_content', $post->ID) ?></div>
+					<div class="pod-content"><?php echo get_post_field('post_content', $post->ID); ?></div>
 				</div>
 
 				<div class="col-md-3 no-padding">

@@ -113,7 +113,7 @@ add_action( 'after_setup_theme', 'hivemind_content_width', 0 );
 function hivemind_include_custom_jquery() {
 	if (! is_admin() ) {
 		wp_deregister_script('jquery');
-		wp_enqueue_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js', array(), null, false);
+		wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js', array(), null, true);
 	}
 }
 add_action('init', 'hivemind_include_custom_jquery');
