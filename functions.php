@@ -118,6 +118,11 @@ function hivemind_include_custom_jquery() {
 }
 add_action('init', 'hivemind_include_custom_jquery');
 
+function tn_custom_excerpt_length( $length ) {
+	return 10;
+}
+add_filter( 'excerpt_length', 'tn_custom_excerpt_length', 999 );
+
 // Adds post link to thumbnail image
 function my_post_image_html( $html, $post_id, $post_image_id ) {
   $html = '<a href="' . get_permalink( $post_id ) . '" title="' . esc_attr( get_post_field( 'post_title', $post_id ) ) . '">' . $html . '</a>';

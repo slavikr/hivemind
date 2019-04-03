@@ -12,7 +12,7 @@ get_header(); ?>
 	<div id="primary" class="content-area col-md-12">
 		<main id="main" class="site-main">
 			
-		<?php
+	<?php
 	$counter = 0;
 	while ( have_posts() ) : the_post();
 		$counter++;
@@ -37,10 +37,8 @@ get_header(); ?>
 						
 	if ($counter !== 0) {
 	    echo '</div>'; //closes stray rows
-	}
-	
-?>
-
+	} 
+	?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

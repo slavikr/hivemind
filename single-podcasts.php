@@ -14,7 +14,7 @@ get_header();
 		<main id="main" class="site-main">
 
 			<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); 'full' ?>
-			<div class="row img" style="background: url('<?php echo $url;?>') no-repeat;">				
+			<div class="row img" style="background: url('<?php echo $url;?>') no-repeat center center;">				
 				<audio controls>
 					<source src="<?php echo get_post_meta($post->ID, 'media_links_download-link', true); ?>" type="audio/mpeg">
 					Your browser does not support the audio element.
@@ -37,6 +37,14 @@ get_header();
 						<a href="<?php echo get_post_meta($post->ID, 'media_links_mixcloud-link', true); ?>">Mixcloud</a>	
 					</button>
 				</div>
+			</div>
+			<div class="row">
+				<?php
+					// If comments are open or we have at least one comment, load up the comment template.
+					if ( comments_open() || get_comments_number() ) :
+						comments_template();
+					endif;
+				?>
 			</div>
 
 		<?php the_post_navigation( array(
