@@ -17,7 +17,7 @@ get_header();
 
 	<div id="primary" class="content-area col-md-12">
 		<main id="main" class="site-main">
-			
+
 		<?php
 		if ( have_posts() ) :
 
@@ -28,7 +28,8 @@ get_header();
 				</header>
 				<?php endif; ?>
 		
-			<!-- The Query -->
+			<!-- Query 1 -->
+			
 			<?php $query = new WP_Query(array( 'post_type' => array('podcasts','post'), 'posts_per_page' => 12 ) ); ?>
 			<?php
 	$counter = 0;
@@ -38,11 +39,11 @@ get_header();
 	        echo '<div class="row">';//start the row
 	    }
 	    
-		    echo '<div class="col-md-4 block">';//start the col//
-		    	the_post_thumbnail();
-		    	echo '<div class="info">';
-					the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-					the_excerpt();
+		    echo '<div class="col-md-4 block hvr">';//start the col//
+		    	the_post_thumbnail('medium_large');
+		    	echo '<div class="center-content content">';
+					the_title( '<h2 class="thumb-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+					hivemind_posted_on();
 				echo '</div>';
 			echo '</div>';//end the col
 		

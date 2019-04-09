@@ -21,7 +21,7 @@ get_header(); ?>
 	    }
 	    
 		    echo '<div class="col-md-4 block">';//start the col//
-		    	the_post_thumbnail();
+		    	the_post_thumbnail('medium_large');
 		    	echo '<div class="info">';
 					the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 				echo '</div>';

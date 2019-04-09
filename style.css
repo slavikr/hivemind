@@ -351,7 +351,7 @@ a:hover, a:active {
 .navbar {
 	padding-left: 0;
 	padding-right: 0;
-	margin: 5px 0 5px 0;
+	margin: 5px 0 25px 0;
 }
 
 .navbar-nav {
@@ -435,11 +435,29 @@ input.form-control, .form-control:focus {
 # Index Page
 --------------------------------------------------------------*/
 
+.content  {
+	text-transform: uppercase;
+}
+
+.hvr img:hover {
+	box-shadow: 0 0px 0px 5px black;
+	opacity: 0.6;
+}
+
+.center-content {
+	position: absolute;
+  left: 0;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+}
+
 .index-img img {
 	height: 380px;
 	object-fit: cover;
 	margin: 10px 0;
 }
+
 /*--------------------------------------------------------------
 # Podcast Single
 --------------------------------------------------------------*/
@@ -469,10 +487,18 @@ input.form-control, .form-control:focus {
 	color: grey;
 }
 
-.pod-title, .entry-title {
+.pod-title {
 	margin-top: 10px;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 300;
+}
+
+.thumb-title a {
+	font-size: 24px;
+	font-weight: 400;
+	color: white;
+	margin: 0;
+	text-shadow: 0 0 7px #8a8787;
 }
 
 .entry-meta, .author, .vcard {
@@ -506,7 +532,9 @@ time.entry-date.published {
 --------------------------------------------------------------*/
 .block {
 	margin-bottom: 25px;
+	position: relative;
 }
+
 .block img {
 	width: 100%;
   height: 339px;
@@ -521,7 +549,7 @@ time.entry-date.published {
 	border-top: 4px solid white;
 }
 
-.info > .entry-title a {
+.info, .entry-title {
 	font-size: 16px;
 	font-weight: 600;
 	color: white;

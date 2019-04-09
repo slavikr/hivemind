@@ -118,6 +118,7 @@ function hivemind_include_custom_jquery() {
 }
 add_action('init', 'hivemind_include_custom_jquery');
 
+// The Excerpt Length
 function tn_custom_excerpt_length( $length ) {
 	return 10;
 }
