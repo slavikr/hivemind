@@ -37,6 +37,8 @@ get_header();
 					<button type="button" class="pod-btn">
 						<a href="<?php echo get_post_meta($post->ID, 'media_links_mixcloud-link', true); ?>">Mixcloud</a>	
 					</button>
+
+                	<div class="social addthis_inline_share_toolbox_n5pg"></div>
 				</div>
 			</div>
 			<div class="row">
