@@ -19,6 +19,7 @@ get_header();
 					<source src="<?php echo get_post_meta($post->ID, 'media_links_download-link', true); ?>" type="audio/mpeg">
 					Your browser does not support the audio element.
 				</audio>
+				<audio id="waveform"></audio>
 			</div>
 
 			<div class="row">

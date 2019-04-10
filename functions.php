@@ -124,6 +124,21 @@ function tn_custom_excerpt_length( $length ) {
 }
 add_filter( 'excerpt_length', 'tn_custom_excerpt_length', 999 );
 
+// Comments
+function wpb_move_comment_field_to_bottom( $fields ) {
+	$comment_field = $fields['comment'];
+	unset( $fields['comment'] );
+	$fields['comment'] = $comment_field;
+	return $fields;
+}
+add_filter( 'comment_form_fields', 'wpb_move_comment_field_to_bottom');
+
+function wpbeginner_remove_comment_url($arg) {
+    $arg['url'] = '';
+    return $arg;
+}
+add_filter('comment_form_default_fields', 'wpbeginner_remove_comment_url');
+
 // Adds post link to thumbnail image
 function my_post_image_html( $html, $post_id, $post_image_id ) {
   $html = '<a href="' . get_permalink( $post_id ) . '" title="' . esc_attr( get_post_field( 'post_title', $post_id ) ) . '">' . $html . '</a>';
@@ -145,7 +160,7 @@ function hivemind_scripts() {
 
 	wp_enqueue_script('pooper', get_template_directory_uri() . '/src/js/pooper.min.js', array(), '', true);	
 
-	wp_enqueue_script('wavesurfer', get_template_directory_uri() . '/src/js/wavesurfer.min.js', array('jquery'), '', true);	
+	//wp_enqueue_script('wavesurfer', get_template_directory_uri() . '/src/js/wavesurfer.min.js', array('jquery'), '', true);	
 
 	wp_enqueue_script('pace', get_template_directory_uri() . '/src/js/pace.js', array(), '', true);	
 

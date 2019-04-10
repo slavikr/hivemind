@@ -675,11 +675,6 @@ time.entry-date.published {
 .widget select {
 	max-width: 100%;
 }
-
-/*--------------------------------------------------------------
-# Content
---------------------------------------------------------------*/
-
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
@@ -704,17 +699,6 @@ time.entry-date.published {
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
-}
-
-/*--------------------------------------------------------------
-## Comments
---------------------------------------------------------------*/
-.comment-content a {
-	word-wrap: break-word;
-}
-
-.bypostauthor {
-	display: block;
 }
 
 /*--------------------------------------------------------------
@@ -827,7 +811,109 @@ object {
 .gallery-caption {
 	display: block;
 }
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
 
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+#comments {
+	margin-top: 35px;
+	padding-top: 35px;
+	border-top: 2px solid black;
+}
+
+#respond { 
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	margin-bottom: 100px;
+}
+
+#respond input[type=text], textarea, input[type=email] {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border-radius: 0;
+  border: 1px solid black;
+}
+   
+#respond input[type=text]:focus,
+input[type=email]:focus,
+textarea:focus {
+	box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+	margin: 5px 1px 3px 0px;
+	border: 1px solid rgba(81, 203, 238, 1);
+}
+
+#reply-title { 
+	font-family: 'Montserrat', sans-serif;
+	font-size: 21px;
+	text-transform: uppercase;
+}
+
+#cancel-comment-reply-link { }
+#commentform { } 
+#author, #email {
+	font-family: 'Montserrat', sans-serif;
+	color: #1d1d1d;
+} 
+ 
+.comment-notes { 
+	font-family: 'Montserrat', sans-serif;
+	margin-bottom: 5px;
+}
+
+.required { }
+.comment-form-author, .comment-form-email { 
+	font-family: 'Montserrat', sans-serif;
+	margin-bottom: 5px;
+}
+
+.comment-form-author > label,
+.comment-form-email > label,
+.comment-form-comment > label {
+	font-family: 'Montserrat', sans-serif;
+	margin-bottom: 5px;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+.comment-form-comment > label {
+	font-family: 'Montserrat', sans-serif;
+}
+
+.comment-form-comment {
+	margin-bottom: 5px;
+}
+
+.comment-form-cookies-consent 
+input[type=checkbox]{
+	margin-right: 10px;
+}
+
+p.comment-form-cookies-consent { 
+	margin-bottom: 5px;
+}
+input#submit {
+	width: 100%;
+	border-radius: 0;
+	background-color: black;
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	font-size: 14px;
+	padding: 17px 0;
+}
 /*--------------------------------------------------------------
 ## Pace Loading Bar
 --------------------------------------------------------------*/
