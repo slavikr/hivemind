@@ -55,6 +55,6 @@
 
 	<footer class="entry-footer">
 		<?php hivemind_entry_footer(); ?>
-		<div class="addthis_inline_share_toolbox_nbub"></div>
+		<div class="addthis_inline_share_toolbox_n5pg_os6p"></div>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
