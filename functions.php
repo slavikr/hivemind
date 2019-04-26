@@ -202,6 +202,10 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/widgets.php';
 
 /**
+ * Theme Functions
+*/
+require get_template_directory() . '/inc/theme-functions.php';
+/**
  * Bootstrap Navwalker File.
  */
 require get_template_directory() . '/inc/boostrap-wp-navwalker.php';
