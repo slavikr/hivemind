@@ -13,13 +13,12 @@ get_header();
 	<div id="primary" class="content-area col-md-12">
 		<main id="main" class="site-main">
 
-			<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); 'full' ?>
-			<div class="row img" style="background: url('<?php echo $url;?>') no-repeat center center;">				
-				<audio controls>
-					<source src="<?php echo get_post_meta($post->ID, 'media_links_download-link', true); ?>" type="audio/mpeg">
-					Your browser does not support the audio element.
-				</audio>
-				<audio id="waveform"></audio>
+			<?php $url = wp_get_attachment_url( get_post_thumbnail_id() ); 'full' ?>
+			<div class="img" style="background: url('<?php echo $url;?>') no-repeat center center;">
+				
+				<?php $audio = get_post_meta($post->ID, 'media_links_download-link', true); ?>
+				<?php echo do_shortcode('[audio src="' . $audio . '"]'); ?>
+				
 			</div>
 
 			<div class="row">
